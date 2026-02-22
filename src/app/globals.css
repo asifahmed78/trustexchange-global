@@ -1,0 +1,102 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme inline {
+  --color-primary: #745751;
+  --color-background-light: #eae1d8;
+  --color-background-dark: #1d2d3a;
+  --color-accent-red: #887869;
+  --color-accent-sage: #99a58f;
+  --color-navy-footer: #1d2d3a;
+
+  --font-serif: "DM Serif Display", serif;
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "DM Sans", sans-serif;
+}
+
+:root {
+  --background: var(--color-background-light);
+  --foreground: #0f172a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--color-background-dark);
+    --foreground: #f8fafc;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+.hero-text-animate {
+  animation: fadeInBlur 1.5s ease-out forwards;
+}
+
+@keyframes fadeInBlur {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideSwapper {
+
+  0%,
+  35% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+  }
+
+  45% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(-40px);
+  }
+
+  50% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(40px);
+  }
+
+  51%,
+  85% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(40px);
+  }
+
+  95%,
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+  }
+}
+
+.animate-swap-1 {
+  animation: slideSwapper 8s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-swap-2 {
+  opacity: 0;
+  animation: slideSwapper 8s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  animation-delay: -4s;
+}
+
+.meeting-grounds-italic {
+  font-family: var(--font-serif);
+  font-style: italic;
+}
