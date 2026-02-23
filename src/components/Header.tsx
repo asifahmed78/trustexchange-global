@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import MobileMenu from './MobileMenu';
 
 export default function Header() {
     return (
@@ -17,9 +18,10 @@ export default function Header() {
                     <Link href="/updates" className="text-sm font-semibold hover:text-[var(--color-primary)] transition-colors">Our Updates</Link>
                     <Link href="/contact" className="text-sm font-semibold hover:text-[var(--color-primary)] transition-colors">Contact Us</Link>
                 </nav>
-                <Link href="/contact" className="bg-[var(--color-primary)] hover:bg-[var(--color-primary)]/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-sm">
+                <Link href="/contact" className="hidden md:block bg-[var(--color-primary)] hover:bg-[var(--color-primary)]/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-sm">
                     Join the community
                 </Link>
+                <MobileMenu />
             </div>
         </header>
     );
