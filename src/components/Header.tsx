@@ -11,14 +11,14 @@ export default function Header() {
                         <img src="/logo.png" alt="Trust Exchange Logo" className="h-8 md:h-10 w-auto" />
                     </div>
                 </Link>
-                <nav className="hidden md:flex items-center gap-8">
+                <nav className="hidden lg:flex items-center gap-8">
                     <Link href="/about" className="text-sm font-semibold hover:text-[var(--color-primary)] transition-colors">About Us</Link>
                     <Link href="/first-100" className="text-sm font-semibold hover:text-[var(--color-primary)] transition-colors">The First 100</Link>
                     <Link href="/x-changers" className="text-sm font-semibold hover:text-[var(--color-primary)] transition-colors">The X-Changers</Link>
                     <Link href="/updates" className="text-sm font-semibold hover:text-[var(--color-primary)] transition-colors">Our Updates</Link>
                     <Link href="/contact" className="text-sm font-semibold hover:text-[var(--color-primary)] transition-colors">Contact Us</Link>
                 </nav>
-                <Link href="/contact" className="hidden md:block bg-[var(--color-primary)] hover:bg-[var(--color-primary)]/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-sm">
+                <Link href="/contact" className="hidden lg:block bg-[var(--color-primary)] hover:bg-[var(--color-primary)]/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-sm">
                     Join the community
                 </Link>
                 <MobileMenu />

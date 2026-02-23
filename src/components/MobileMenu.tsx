@@ -17,7 +17,7 @@ export default function MobileMenu() {
     ];
 
     return (
-        <div className="md:hidden flex items-center">
+        <div className="lg:hidden flex items-center">
             <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-[var(--foreground)] p-2 focus:outline-none"
@@ -42,8 +42,8 @@ export default function MobileMenu() {
                             href={link.href}
                             onClick={() => setIsOpen(false)}
                             className={`text-base font-semibold py-2 transition-colors ${pathname === link.href
-                                    ? 'text-[var(--color-primary)]'
-                                    : 'text-[var(--foreground)] hover:text-[var(--color-primary)]'
+                                ? 'text-[var(--color-primary)]'
+                                : 'text-[var(--foreground)] hover:text-[var(--color-primary)]'
                                 }`}
                         >
                             {link.label}
